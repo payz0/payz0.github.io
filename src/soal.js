@@ -1,5 +1,5 @@
 if (!localStorage.getItem("kelas")) {
-    window.location.replace("https://payz0.github.io/jadwal/");
+    window.location.replace("/jadwal.html");
   }
   var kelas7 = [
     [

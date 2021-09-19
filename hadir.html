@@ -57,7 +57,11 @@
             
             <input style="width: 50px;border:0px " type="date" ng-model="tanggal" ng-change="waktu()">
       </div>
-      <table class="table table-hover table-bordered">
+     <div style="display: flex;margin-top: 40px;">
+        <input type="text" ng-model="code" class="form-control" placeholder="kode">
+        <button class="btn btn-info" ng-click="cekode()">ok</button>
+      </div>
+      <table class="table table-hover table-bordered" ng-if="guru">
         <thead class="bg-dark text-white text-center">
           <tr>
             <td rowspan="2">No</td>
@@ -118,7 +122,14 @@
         })
       }
       
-      $scope.getData()
+      $scope.guru = false;
+      $scope.cekode = function () {
+        if ($scope.code == "guruUTS") {
+          $scope.guru = true;
+          $scope.getData();
+        }
+        console.log("masuk");
+      };
 
     });
          

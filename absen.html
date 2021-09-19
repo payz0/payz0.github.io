@@ -191,6 +191,7 @@
                $scope.token = a
                 $scope.statusAbsen = true
                 $scope.ujian = false
+               localStorage.setItem("dbAbsensi", JSON.stringify($scope.allData));
             });
           }else{
             $http.put("https://dr3yx.sse.codesandbox.io/update/"+$scope.allData[dataIndex]._id,$scope.siswa).success((a)=>{
@@ -201,6 +202,7 @@
                $scope.token = a
                 $scope.statusAbsen = true
                 $scope.ujian = false
+               localStorage.setItem("dbAbsensi", JSON.stringify($scope.allData));
             })
           }
 
@@ -210,11 +212,27 @@
           $http.get("https://dr3yx.sse.codesandbox.io/get").success((a) => {
             $scope.allData = a.tabel;
             $scope.kelas = a.kelas;
-            console.log($scope.allData)
+            localStorage.setItem("dbAbsensi", JSON.stringify(a.tabel));
+            localStorage.setItem("dbKelas", JSON.stringify(a.kelas));
           });
         };
 
-        $scope.getData();
+        //revisi baru
+  localStorage.removeItem("agama");
+  localStorage.removeItem("menit");
+  localStorage.removeItem("detik");
+
+  if (localStorage.getItem("dbAbsensi")) {
+    $scope.allData = JSON.parse(localStorage.getItem("dbAbsensi"));
+  } else {
+    $scope.getData();
+  }
+
+  if (localStorage.getItem("dbKelas")) {
+    $scope.kelas = JSON.parse(localStorage.getItem("dbKelas"));
+  } else {
+    $scope.getData();
+  }
       });
 
     </script>

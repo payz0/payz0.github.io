@@ -73,10 +73,38 @@
           </td>
         </tr>
         <tr>
-          <td colspan="2" style="text-align: center;"> <button id="capture" ng-click="kirim()" class="btn btn-primary">Saya Hadir</button></td>
+          <td colspan="2" style="text-align: center;">
+            <i ng-if="notif" style="position: absolute;margin-top: -24px;left: 0;right: 0;color: red;">Nama dan kelas harus di isi</i>
+            <button id="capture" ng-click="kirim()" class="btn btn-primary">Saya Hadir</button></td>
         </tr>
       </table>
-      
+       <div class="jumbotron" ng-if="statusAbsen" style="    position: relative;
+      margin-top: -215px;
+      opacity: 0.9;">
+        <h3 style="color: green;
+        text-align: center;">Sukses absen</h3>
+        <table class="table">
+          <tr>
+            <td>Nama </td>
+            <td>{{token.nama}}</td>
+          </tr>
+          <tr>
+            <td>Kelas </td>
+            <td>{{token.kelas}}</td>
+          </tr>
+          <tr>
+            <td>Token</td>
+            <td><h2 style="color: white;
+              background: #000000;
+              text-align: center;">{{token.token}}</h2></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <a href="/jadwal.html" class="btn btn-info">Ke soal</a>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
     <script > 
       const capture = document.querySelector("#capture");
@@ -85,7 +113,7 @@
       const canvas = document.createElement("canvas");
       // const tanggal = document
       var today = new Date();
-      var tgl = today.getDate();
+      var tgl = 8//today.getDate();
       var jam = today.getHours();
       var menit = today.getMinutes();
       var sekarang = jam * 60 + menit;
@@ -117,7 +145,10 @@
         $scope.siswa = {};
         $scope.allData = [];
         $scope.siswa.kelas = "7A"
+        $scope.notif = false;
+        $scope.statusAbsen = false;
 
+       function cekSesi(){
         if (sekarang > 430 && sekarang < 540) {
            $scope.sesi = "sesi 1";
            $scope.ujian = true;
@@ -131,11 +162,11 @@
             $scope.siswa.tgl2 = new Date()
             videof();
         }
-        
-        
-         
+        }
+         cekSesi()
         // console.log($scope.siswa.tgl1)
         $scope.kirim = function () {
+          cekSesi()
           // $scope.siswa.tgl = new Date();
           var dataIndex = "bodol"
           canvas.width = video.videoWidth;
@@ -157,6 +188,9 @@
               console.log("insert sukses");
               $scope.siswa = {};
               $scope.siswa.kelas = '7A'
+               $scope.token = a
+                $scope.statusAbsen = true
+                $scope.ujian = false
             });
           }else{
             $http.put("https://dr3yx.sse.codesandbox.io/update/"+$scope.allData[dataIndex]._id,$scope.siswa).success((a)=>{
@@ -164,6 +198,9 @@
               console.log("update suksess")
               $scope.siswa = {};
               $scope.siswa.kelas = '7A'
+               $scope.token = a
+                $scope.statusAbsen = true
+                $scope.ujian = false
             })
           }
 

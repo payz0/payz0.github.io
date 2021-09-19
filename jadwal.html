@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadwal</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="color: white;"
+          >SMP Negeri 1 Arut Selatan</a
+        >
+      </div>
+    </nav>
+    <div class="container" style="margin-top: 20px;">
+      <div style="text-align: right;">
+        <a href="/">Kembali</a>
+      </div>
+      <b id="info"></b><i style="float: right;" id="rand"></i>
+
+      <div class="jumbotron" id="jadwal">
+        <table class="table table-bordered table-hover">
+          <thead class="table-light">
+            <tr>
+              <th class="text-center">No</th>
+              <th class="text-center">Hari</th>
+              <th class="text-center">Jam</th>
+              <th class="text-center">Mapel</th>
+              <th class="text-center">Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">1</td>
+              <td rowspan="2">Senin</td>
+              <td>07:30 - 09:00</td>
+              <td>Bahasa Indonesia</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>09:30 - 11:00</td>
+              <td>Pendidikan Agama</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">2</td>
+              <td rowspan="2">Selasa</td>
+              <td>07:30 - 09:00</td>
+              <td>IPA</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>09:30 - 11:00</td>
+              <td>Prakarya</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">3</td>
+              <td rowspan="2">Rabu</td>
+              <td>07:30 - 09:00</td>
+              <td>Bahasa Inggris</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>09:30 - 11:00</td>
+              <td>Seni Budaya</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">4</td>
+              <td rowspan="2">Kamis</td>
+              <td>07:30 - 09:00</td>
+              <td>IPS</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>09:30 - 11:00</td>
+              <td>Penjaskes</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Jumat</td>
+              <td>07:30 - 09:00</td>
+              <td>Matematika</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>6</td>
+              <td>Sabtu</td>
+              <td>07:30 - 09:00</td>
+              <td>Pkn</td>
+              <td class="text-center">
+                <a
+                  onclick="localStorage.setItem('kelas',0)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-info"
+                >
+                  7</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',1)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-danger"
+                >
+                  8</a
+                >|<a
+                  onclick="localStorage.setItem('kelas',2)"
+                  href="/soal.html"
+                  class="btn btn-sm btn-primary"
+                >
+                  9</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      var waktu = new Date();
+      var options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      };
+      $("#info").html(
+        waktu.toLocaleDateString(["ban", "id"], options) +
+          ", " +
+          waktu.getHours() +
+          ":" +
+          waktu.getMinutes()
+      );
+
+      setTimeout(() => {
+        if (waktu.getHours() < 7 || waktu.getHours() > 10) {
+          $("#rand").html(" ujian di tutup");
+        } else {
+          $("#rand").html(" ujian di buka");
+        }
+      }, 500);
+    </script>
+  </body>
+</html>

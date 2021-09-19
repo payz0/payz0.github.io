@@ -31,7 +31,7 @@
     <h4>Daftar Hadir Siswa {{kelas}}</h4>
     <hr>
     Absensi tanggal : {{today | date:"dd-MM-yyyy"}}
-    <div style="display:flex; align-items: center;float: right;">
+    <div style="display:flex; align-items: center;float: right;" ng-if="guru">
             <span for="" style="margin-right:20px">Kelas </span>
             <select class="form-control" ng-model="kelas" ng-change="getData()">
               <option value="7A">7A</option>
@@ -57,7 +57,7 @@
             
             <input style="width: 50px;border:0px " type="date" ng-model="tanggal" ng-change="waktu()">
       </div>
-     <div style="display: flex;margin-top: 40px;">
+     <div style="display: flex;margin-top: 40px;" ng-show="!guru">
         <input type="text" ng-model="code" class="form-control" placeholder="kode">
         <button class="btn btn-info" ng-click="cekode()">ok</button>
       </div>

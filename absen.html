@@ -147,6 +147,7 @@
         $scope.siswa.kelas = "7A"
         $scope.notif = false;
         $scope.statusAbsen = false;
+        $scope.dataUtama = []
 
        function cekSesi(){
         if (sekarang > 430 && sekarang < 540) {
@@ -211,11 +212,16 @@
         $scope.getData = function () {
           $http.get("https://dr3yx.sse.codesandbox.io/get").success((a) => {
             $scope.allData = a.tabel;
-            $scope.kelas = a.kelas;
+            $scope.kelas = $scope.dataUtama = a.kelas;
             localStorage.setItem("dbAbsensi", JSON.stringify(a.tabel));
             localStorage.setItem("dbKelas", JSON.stringify(a.kelas));
           });
         };
+        
+         $scope.filterKelas = function(){
+          $scope.kelas = $scope.dataUtama.filter((a)=>{return a.kelas == $scope.siswa.kelas})
+          console.log($scope.kelas)
+        }
 
         //revisi baru
   localStorage.removeItem("agama");
@@ -229,7 +235,7 @@
   }
 
   if (localStorage.getItem("dbKelas")) {
-    $scope.kelas = JSON.parse(localStorage.getItem("dbKelas"));
+    $scope.kelas = $scope.dataUtama = JSON.parse(localStorage.getItem("dbKelas"));
   } else {
     $scope.getData();
   }

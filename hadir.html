@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+ </head>
+ <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="color: white;"
+          >SMP Negeri 1 Arut Selatan</a>
+      </div>
+    </nav>
+    <div class="container">
+        <a href="https://payz0.github.io/" style="float:right">Kembali</a>
+    <h3>Daftar Hadir</h3>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" id="7-tab" data-toggle="tab" href="" role="tab" aria-controls="profile" aria-selected="false">Kelas 7</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="8-tab" data-toggle="tab" href="" role="tab" aria-controls="contact" aria-selected="false">Kelas 8</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="9-tab" data-toggle="tab" href="" role="tab" aria-controls="contact" aria-selected="false">Kelas 9</a>
+        </li>
+      </ul>
+        
+    
+
+
+      <div  id="7">
+         <iframe src="https://script.google.com/macros/s/AKfycbxAEVFjq3qfpiHgw_iuyzN6iBTo6QhQ510B4gA3JuaNpVBr_OuIinrrXRNUeDYlT7n6dQ/exec" width="100%" height="750px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+      <div  id="8">
+        <iframe src="https://script.google.com/macros/s/AKfycbzYsgSMsMYi9CuRVVoHKKuSbRWbt0c5YsS3pO0jj7raKgwIFB0jB58D08oSZOHjm1rF/exec" width="100%" height="750px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+      <div  id="9">
+        <iframe src="https://script.google.com/macros/s/AKfycbwppTgFRWVHOSSYQRDnDC3tWRh5HGiK95hzihBfj82yvXwjf7uRsiOnnb8L-WSJcbpq/exec" width="100%" height="750px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+
+   
+    </div>
+    <script>
+        $('#7').show();
+        $('#8').hide();
+        $('#9').hide();
+        $('#7-tab').on('click', function (e) {
+          e.preventDefault()
+          $('#7').show();
+              $('#8').hide();
+              $('#9').hide();
+        })
+        $('#8-tab').on('click', function (e) {
+          e.preventDefault()
+          $('#8').show();
+            $('#7').hide();
+            $('#9').hide();
+        })
+        $('#9-tab').on('click', function (e) {
+          e.preventDefault()
+          $('#9').show();
+            $('#7').hide();
+            $('#8').hide();
+        })
+      </script>
+   
+  </body>
+</html>

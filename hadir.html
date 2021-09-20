@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <style>
+    #clasToken, #clasToken1{
+      width: 85px;
+      text-align: center;
+      background: #585858;
+      font-weight: 900;
+      color: white;
+    }
+    button{
+      float: right;
+      margin-top: -58px;
+      margin-right: -160px;
+    }
+    </style>
+  </head>
+  <body>
+      <nav
+      class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="color: white;">SMP Negeri 1 Arut Selatan</a>
+        <div style="text-align: right;margin-top: 13px;">
+            <i  class="animate__animated animate__flash">
+              Token kelas <span id="clas"></span> <input value="Loading.." readonly id="clasToken" onclick="copyToken()"></input>
+            </i>
+          </div>
+      </div>
+    </nav>
+    <div class="container">
+      <a href="https://payz0.github.io/" style="float: right;">Kembali</a>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            onclick="getToken(7)"
+            class="nav-link"
+            id="7-tab"
+            data-toggle="tab"
+            href="#"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+            >Kelas 7</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            onclick="getToken(8)"
+            class="nav-link"
+            id="8-tab"
+            data-toggle="tab"
+            href="#"
+            role="tab"
+            aria-controls="contact"
+            aria-selected="false"
+            >Kelas 8</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            onclick="getToken(9)"
+            class="nav-link"
+            id="9-tab"
+            data-toggle="tab"
+            href="#"
+            role="tab"
+            aria-controls="contact"
+            aria-selected="false"
+            >Kelas 9</a
+          >
+        </li>
+      </ul>
+
+      <div id="sesi" class="text-center">
+        <span id="infoJam"></span>
+        <div id="formAbsen" class="container jumbotron">
+          Absensi belum di buka
+        </div>
+      </div>
+    </div>
+
+    <script src="./ucok.js">
+      
+    </script>
+  </body>
+</html>

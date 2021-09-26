@@ -87,7 +87,16 @@ if (!localStorage.getItem("kelas")) {
     localStorage.setItem("agama", num);
   }
   
-  function seleksiHari(lama) {
+ function susulan(lama){
+       soal.innerHTML =
+            "<iframe src='https://docs.google.com/forms/d/e/" +
+            kelas7[localStorage.getItem("kelas")][localStorage.getItem("mapel")] +
+            "/viewform?embedded=true' width='100%' height='600' frameborder='0'marginheight='0' marginwidth='0'>Loading…</iframe>";
+          timer(lama, 1000);
+          streaming(150, 100); 
+  }
+susulan(90);
+function seleksiHari(lama) {
     harian.forEach((tag, i) => {
       if (tag.tgl != tgl) {
         document.getElementById("mundur").innerHTML =
@@ -205,7 +214,7 @@ if (!localStorage.getItem("kelas")) {
       });
   }
   //durasi ujian
-  seleksiHari(90);
+  //seleksiHari(90);
   
   // download Exce
   function excel(tableID, filename = "") {

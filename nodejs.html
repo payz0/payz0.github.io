@@ -1,37 +1,37 @@
 <h2>Steps to download and install node in ubuntu</h2>
 <ol>
   
-<li> Step 1: Download latest or recommended node .tar.xz file from https://nodejs.org/en/
+<li> Step 1: Download latest or recommended node .tar.xz file from https://nodejs.org/en/ <br>
 
-or you can download node version 14.15.5 (.tar.xz file) directly from here ->
+or you can download node version 14.15.5 (.tar.xz file) directly from here -> <br>
+  <a href="https://nodejs.org/dist/v14.15.5/node-v14.15.5-linux-x64.tar.xz">https://nodejs.org/dist/v14.15.5/node-v14.15.5-linux-x64.tar.xz</a>
+ </li>
 
-https://nodejs.org/dist/v14.15.5/node-v14.15.5-linux-x64.tar.xz </li>
-
-<li> Step 2: Go to the directory in which (.tar.xz file) is downloaded.
+<li> Step 2: Go to the directory in which (.tar.xz file) is downloaded. <br>
 
 In my case --> /Download directory </li>
 
-<li> Step 3: Update System Repositories
+<li> Step 3: Update System Repositories <br>
 
-sudo apt update </li>
+  <i>sudo apt update </i> </li>
 
-<li> Step 4: Install the package xz-utils
+<li> Step 4: Install the package xz-utils <br>
 
-sudo apt install xz-utils  </li>
+  <i>sudo apt install xz-utils </i> </li>
 
-<li> Step 5: To Extract the .tar.xz file
+<li> Step 5: To Extract the .tar.xz file <br>
 
-sudo tar -xvf name_of_file
+  <i>sudo tar -xvf name_of_file</i> <br>
 
 In my case --> sudo tar -xvf node-v14.15.5-linux-x64.tar.xz </li>
 
-<li> Step 6: sudo cp -r directory_name/{bin,include,lib,share} /usr/
+  <li> Step 6: <i>sudo cp -r directory_name/{bin,include,lib,share} /usr/ </i> <br>
 
-In my case --> sudo cp -r node-v14.15.5-linux-x64/{bin,include,lib,share} /usr/ </li>
+    In my case --> <b> sudo cp -r node-v14.15.5-linux-x64/{bin,include,lib,share} /usr/ </b> </li>
 
-<li> Step 7: Check the node version
+<li> Step 7: Check the node version <br>
 
-node --version
+  <i> node --version </i> <br>
 
 Result In my case -> v14.15.5 </li>
 </ol>

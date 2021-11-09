@@ -1,7 +1,7 @@
 [
   { 
     "mapel": "Agama",
-     "jadwal": "12-1-2021",
+     "jadwal": "12-2-2021",
     "durasi": 90,
     "kelas":{
             "7":{
@@ -58,16 +58,16 @@
         },
     "sesi": [
       {
-        "jam": "15:02"
+        "jam": "7:00"
       },
       {
-        "jam": "22:30"
+        "jam": "10:15"
       }]
   },
 {
     "mapel": "PKn",
-     "jadwal": "12-2-2021",
-    "durasi": 10,
+     "jadwal": "12-6-2021",
+    "durasi": 90,
     "kelas":{
             "7":{
                 "link":"1FAIpQLScI42HtxBXt0bRSSpBYFdG9HyOZYxDu80FrtydgIgzTBGYTXg",
@@ -84,18 +84,18 @@
         },
     "sesi": [
       {
-        "jam": "7:22"
+        "jam": "7:00"
       },
       {
-        "jam": "13:05"
+        "jam": "10:15"
       }
     ]
   },
 
   {
     "mapel": "Bahasa Indonesia",
-     "jadwal": "12-3-2021",
-    "durasi": 4,
+     "jadwal": "12-1-2021",
+    "durasi": 90,
     "kelas":{
             "7":{
                 "link":"wwww",
@@ -112,10 +112,10 @@
         },
     "sesi": [
       {
-        "jam": "7:30"
+        "jam": "7:00"
       },
       {
-        "jam": "9:05"
+        "jam": "10:15"
       }
     ]
   },
@@ -139,17 +139,17 @@
         },
     "sesi": [
       {
-        "jam": "7:30"
+        "jam": "7:00"
       },
       {
-        "jam": "9:30"
+        "jam": "9:00"
       }
     ]
   },
   {
     "mapel": "IPA",
-     "jadwal": "12-5-2021",
-    "durasi": 90,
+     "jadwal": "12-8-2021",
+    "durasi": 120,
     "kelas":{
             "7":{
                 "link":"wwww",
@@ -166,7 +166,7 @@
         },
     "sesi": [
       {
-        "jam": "7:30"
+        "jam": "7:00"
       },
       {
         "jam": "9:30"
@@ -176,8 +176,8 @@
 
   {
     "mapel": "IPS",
-     "jadwal": "12-6-2021",
-    "durasi": 6,
+     "jadwal": "12-3-2021",
+    "durasi": 90,
     "kelas":{
             "7":{
                 "link":"wwww",
@@ -194,10 +194,10 @@
         },
     "sesi": [
       {
-        "jam": "7:30"
+        "jam": "7:00"
       },
       {
-        "jam": "9:30"
+        "jam": "9:00"
       }
     ]
   },
@@ -205,7 +205,7 @@
   {
     "mapel": "Matematika",
      "jadwal": "12-7-2021",
-    "durasi": 90,
+    "durasi": 120,
     "kelas":{
             "7":{
                 "link":"wwww",
@@ -222,7 +222,7 @@
         },
     "sesi": [
       {
-        "jam": "7:30"
+        "jam": "7:00"
       },
       {
         "jam": "9:30"
@@ -232,8 +232,8 @@
 
   {
     "mapel": "Seni Budaya",
-     "jadwal": "12-8-2021",
-    "durasi": 90,
+     "jadwal": "12-6-2021",
+    "durasi": 60,
     "kelas":{
             "7":{
                 "link":"wwww",
@@ -250,18 +250,18 @@
         },
     "sesi": [
       {
-        "jam": "5:30"
+        "jam": "8:45"
       },
       {
-        "jam": "9:30"
+        "jam": "12:00"
       }
     ]
   },
 
   {
     "mapel": "Prakarya",
-     "jadwal": "12-9-2021",
-    "durasi": 90,
+     "jadwal": "12-1-2021",
+    "durasi": 60,
     "kelas":{
             "7":{
                 "link":"wwww",
@@ -278,17 +278,17 @@
         },
     "sesi": [
       {
-        "jam": "7:30"
+        "jam": "8:45"
       },
       {
-        "jam": "9:30"
+        "jam": "12:00"
       }
     ]
   },
   {
     "mapel": "Pendidikan Jasmani dan Olah raga",
-     "jadwal": "12-10-2021",
-    "durasi": 90,
+     "jadwal": "12-2-2021",
+    "durasi": 60,
     "kelas":{
             "7":{
                 "link":"wwww",
@@ -305,10 +305,10 @@
         },
     "sesi": [
       {
-        "jam": "7:30"
+        "jam": "8:45"
       },
       {
-        "jam": "9:30"
+        "jam": "12:00"
       }
     ]
   }

@@ -1,7 +1,7 @@
 [
   { 
     "mapel": "Agama",
-     "jadwal": "12-9-2021",
+     "jadwal": "12-1-2021",
     "durasi": 90,
     "kelas":{
             "7":{
@@ -66,7 +66,7 @@
   },
 {
     "mapel": "PKn",
-     "jadwal": "11-15-2021",
+     "jadwal": "12-2-2021",
     "durasi": 10,
     "kelas":{
             "7":{
@@ -94,7 +94,7 @@
 
   {
     "mapel": "Bahasa Indonesia",
-     "jadwal": "11-10-2021",
+     "jadwal": "12-3-2021",
     "durasi": 4,
     "kelas":{
             "7":{
@@ -121,7 +121,7 @@
   },
   {
     "mapel": "Bahasa Inggris",
-     "jadwal": "11-10-2021",
+     "jadwal": "12-4-2021",
     "durasi": 90,
     "kelas":{
             "7":{
@@ -148,7 +148,7 @@
   },
   {
     "mapel": "IPA",
-     "jadwal": "11-11-2021",
+     "jadwal": "12-5-2021",
     "durasi": 90,
     "kelas":{
             "7":{
@@ -176,7 +176,7 @@
 
   {
     "mapel": "IPS",
-     "jadwal": "11-9-2021",
+     "jadwal": "12-6-2021",
     "durasi": 6,
     "kelas":{
             "7":{
@@ -204,7 +204,7 @@
 
   {
     "mapel": "Matematika",
-     "jadwal": "11-13-2021",
+     "jadwal": "12-7-2021",
     "durasi": 90,
     "kelas":{
             "7":{
@@ -232,7 +232,7 @@
 
   {
     "mapel": "Seni Budaya",
-     "jadwal": "11-13-2021",
+     "jadwal": "12-8-2021",
     "durasi": 90,
     "kelas":{
             "7":{
@@ -260,7 +260,7 @@
 
   {
     "mapel": "Prakarya",
-     "jadwal": "11-15-2021",
+     "jadwal": "12-9-2021",
     "durasi": 90,
     "kelas":{
             "7":{
@@ -287,7 +287,7 @@
   },
   {
     "mapel": "Pendidikan Jasmani dan Olah raga",
-     "jadwal": "11-15-2021",
+     "jadwal": "12-10-2021",
     "durasi": 90,
     "kelas":{
             "7":{

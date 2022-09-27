@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MediaCapture and Streams API</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>MediaCapture, MediaRecorder and Streams API payz0</h1>
+    </header>
+    <main>
+       
+        <audio controls>
+        </audio>
+
+    </main>    
+    <script>
+        
+        let constraintObj = { 
+            audio: true
+
+        }; 
+       
+        navigator.mediaDevices.getUserMedia(constraintObj)
+        .then(function(mediaStreamObj) {
+            //connect the media stream to the first video element
+            let audio = document.querySelector('audio');
+            if ("srcObject" in audio) {
+                audio.srcObject = mediaStreamObj;
+            } else {
+                //old version
+                audio.src = window.URL.createObjectURL(mediaStreamObj);
+            }
+            
+            audio.onloadedmetadata = function(ev) {
+
+                audio.play();
+            };
+            
+
+        })
+        .catch(function(err) { 
+            console.log(err.name, err.message); 
+        });
+
+    </script>
+</body>

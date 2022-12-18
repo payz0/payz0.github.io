@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Drawing editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-blue-300 w-full h-screen text-center">
+      <h1>Drawing payz0 editor</h1>
+      <div class="flex space-x-4 p-4 w-full">
+        <div>
+          <canvas id="canvas"></canvas>
+        </div>
+        <div class="bg-white px-10 py-4 rounded-lg">
+          <ul class="leading-8">
+            <li
+              onclick="mouseEvent('kotak')"
+              id="kotak"
+              class="flex w-full hover:bg-blue-100 cursor-pointer space-x-2 items-center"
+            >
+              <img
+                class="w-4 h-4"
+                src="http://cdn.onlinewebfonts.com/svg/img_524828.png"
+                alt=""
+              />
+              <span> Rectangle</span>
+            </li>
+            <li
+              onclick="mouseEvent('segitiga')"
+              id="segitiga"
+              class="flex w-full hover:bg-blue-100 cursor-pointer space-x-2 items-center"
+            >
+              <img
+                class="w-4 h-4"
+                src="https://www.svgrepo.com/show/162137/plain-triangle.svg"
+                alt=""
+              />
+              <span> Triangle</span>
+            </li>
+            <li
+              onclick="mouseEvent('bulat')"
+              id="bulat"
+              class="flex w-full hover:bg-blue-100 cursor-pointer space-x-2 items-center"
+            >
+              <img
+                class="w-4 h-4"
+                src="https://www.svgrepo.com/show/159295/circle-outline.svg"
+                alt=""
+              />
+              <span> Circle</span>
+            </li>
+            <li
+              onclick="mouseEvent('garis')"
+              id="garis"
+              class="flex w-full hover:bg-blue-100 cursor-pointer space-x-2 items-center"
+            >
+              <img
+                class="w-4 h-4"
+                src="https://cdn.onlinewebfonts.com/svg/img_469847.png"
+                alt=""
+              />
+              <span>Line</span>
+            </li>
+            <li
+              onclick="mouseEvent('brush')"
+              id="brush"
+              class="flex w-full hover:bg-blue-100 cursor-pointer space-x-2 items-center"
+            >
+              <img
+                class="w-4 h-4"
+                src="data:image/png;base64,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"
+                alt=""
+              />
+              <span> Brush</span>
+            </li>
+            <li
+              onclick="mouseEvent('erase')"
+              id="eraser"
+              class="flex w-full hover:bg-blue-100 cursor-pointer space-x-2 items-center"
+            >
+              <img
+                class="w-4 h-4"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Eraser_icon.svg/800px-Eraser_icon.svg.png"
+                alt=""
+              />
+              <span> Eraser</span>
+            </li>
+          </ul>
+
+          <hr />
+          <div class="text-left leading-10">
+            <input id="fill" type="checkbox" /> fillCollor
+            <input id="range" type="range" min="0" max="10" />
+            <span id="infoGaris"></span>
+            <div class="flex space-x-2">
+              <div
+                onclick="warnas('black')"
+                class="w-4 cursor-pointer h-4 bg-black"
+              ></div>
+              <div
+                onclick="warnas('blue')"
+                class="w-4 cursor-pointer h-4 bg-blue-800"
+              ></div>
+              <div
+                onclick="warnas('red')"
+                class="w-4 cursor-pointer h-4 bg-red-600"
+              ></div>
+              <div
+                onclick="warnas('yellow')"
+                class="w-4 cursor-pointer h-4 bg-yellow-400"
+              ></div>
+              <div id="color" class="h-10 w-10 border-2"></div>
+            </div>
+            <div class="flex space-x-2 mt-2">
+              <button class="bg-blue-600 px-2" id="clear">Clear</button>
+              <button class="bg-blue-600 px-2" onclick="download()">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

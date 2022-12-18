@@ -31,21 +31,21 @@ var warna = "white";
 fills.addEventListener("change", (e) => {
   console.log(e.target.checked);
   fillColor = e.target.checked;
-});
+},false);
 color.style.background = warna;
 range.value = tebalgaris;
 info.innerHTML = tebalgaris;
 range.addEventListener("change", (e) => {
   tebalgaris = e.target.value;
   info.innerHTML = e.target.value;
-});
-hapus.addEventListener("click", clear);
+},false);
+hapus.addEventListener("click", clear,false);
 
 function mouseEvent(param) {
   styleLine = param;
-  canvas.addEventListener("mousedown", mouseDown);
-  canvas.addEventListener("mousemove", mouseMove);
-  canvas.addEventListener("mouseup", mouseUp);
+  canvas.addEventListener("mousedown", mouseDown,false);
+  canvas.addEventListener("mousemove", mouseMove,false);
+  canvas.addEventListener("mouseup", mouseUp,false);
 }
 
 function mouseMove(e) {

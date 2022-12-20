@@ -69,8 +69,8 @@ function mouseMove(e) {
     sgX = stX - lsX < 0 ? lsX - stX : stX - lsX;
     // sgY = stY - lsY < 0 ? lsY - stY : stY - lsY;
   }
-  lsX = e.touches[0].clientX - rect.left || e.clientX - rect.left;
-  lsY = e.touches[0].clientY - rect.top  || e.clientY - rect.top;
+  lsX = e.touches ? e.touches[0].clientX - rect.left : e.clientX - rect.left;
+  lsY = e.touches ? e.touches[0].clientY - rect.top  : e.clientY - rect.top;
   if (startDraw) {
     drawing();
     // ctx.fillText(styleLine, lsX, lsY);
@@ -87,8 +87,8 @@ function mouseDown(e) {
     styleLine === "garis" ||
     styleLine === "kotak"
   ) {
-    stX = e.touches[0].clientX - rect.left || e.clientX - rect.left;
-    stY = e.touches[0].clientY - rect.top  || e.clientY - rect.top;
+    stX = e.touches ? e.touches[0].clientX - rect.left : e.clientX - rect.left;
+    stY = e.touches ? e.touches[0].clientY - rect.top  : e.clientY - rect.top;
   }
   startDraw = true;
 }

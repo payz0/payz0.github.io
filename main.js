@@ -46,6 +46,13 @@ function mouseEvent(param) {
   canvas.addEventListener("mousedown", mouseDown,false);
   canvas.addEventListener("mousemove", mouseMove,false);
   canvas.addEventListener("mouseup", mouseUp,false);
+  touchEvent()
+}
+
+function touchEvent(){
+  canvas.addEventListener("touchstart", mouseDown);
+  canvas.addEventListener("touchmove", mouseMove);
+  canvas.addEventListener("touchend", mouseUp); 
 }
 
 function mouseMove(e) {
@@ -62,8 +69,8 @@ function mouseMove(e) {
     sgX = stX - lsX < 0 ? lsX - stX : stX - lsX;
     // sgY = stY - lsY < 0 ? lsY - stY : stY - lsY;
   }
-  lsX = e.clientX - rect.left;
-  lsY = e.clientY - rect.top;
+  lsX = e.touches[0].clientX - rect.left || e.clientX - rect.left;
+  lsY = e.touches[0].clientY - rect.top  || e.clientY - rect.top;
   if (startDraw) {
     drawing();
     // ctx.fillText(styleLine, lsX, lsY);
@@ -80,8 +87,8 @@ function mouseDown(e) {
     styleLine === "garis" ||
     styleLine === "kotak"
   ) {
-    stX = e.clientX - rect.left;
-    stY = e.clientY - rect.top;
+    stX = e.touches[0].clientX - rect.left || e.clientX - rect.left;
+    stY = e.touches[0].clientY - rect.top  || e.clientY - rect.top;
   }
   startDraw = true;
 }
